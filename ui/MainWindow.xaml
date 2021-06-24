@@ -14,22 +14,23 @@
     <hc:BlurWindow.NonClientAreaContent>
         <StackPanel Height="29">
             <Menu HorizontalAlignment="Left">
-                <MenuItem Header="Header1">
-                    <MenuItem Header="Header1"/>
-                    <MenuItem Header="Header2"/>
-                    <MenuItem Header="Header2"/>
+                <MenuItem Header="File">
+                    <MenuItem Header="New Tab"/>
+                    <MenuItem Header="New Window" />
+                    <MenuItem Header="Open cmd" Click="OpenCmd" />
+                    <MenuItem Header="Quit"/>
                 </MenuItem>
-                <MenuItem Header="Header2">
-                    <MenuItem Header="Header1"/>
-                    <MenuItem Header="Header2"/>
-                    <MenuItem Header="Header2"/>
+                <MenuItem Header="Edit">
+                    <MenuItem Header="Open Settings.json"/>
+                    <MenuItem Header="Reload" />
+                    <MenuItem Header="Open Preferences"/>
                 </MenuItem>
-                <MenuItem Header="Header3">
-                    <MenuItem Header="Header1"/>
-                    <MenuItem Header="Header2"/>
-                    <MenuItem Header="Header2"/>
+                <MenuItem Header="View">
+                    <MenuItem Header="New Tab"/>
+                    <MenuItem Header="New Window"/>
                 </MenuItem>
             </Menu>
         </StackPanel>
     </hc:BlurWindow.NonClientAreaContent>
+    <hc:TextBox HorizontalAlignment="Left" Height="23" Margin="105,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Name="Output"/>
 </hc:BlurWindow>

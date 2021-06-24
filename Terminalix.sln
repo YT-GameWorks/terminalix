@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui", "ui\ui.csproj", "{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "terminalix", "ui\terminalix.csproj", "{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
