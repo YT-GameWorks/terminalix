@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="Terminalix" 
         WindowStartupLocation="CenterScreen"
         Style="{StaticResource WindowWin10}"
         ShowTitle="True"
@@ -32,7 +32,4 @@
             </Menu>
         </StackPanel>
     </hc:Window.NonClientAreaContent>
-    <Grid>
-
-    </Grid>
 </hc:Window>

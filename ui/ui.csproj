@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18a0a8ce-fb1e-46dd-9ed1-95406ffd9ca6}</ProjectGuid>
+    <ProjectGuid>{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ui</RootNamespace>
     <AssemblyName>ui</AssemblyName>
@@ -68,8 +68,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Properties\DesignTimeResources.xaml"
-          Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
