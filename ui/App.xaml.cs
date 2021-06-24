@@ -1,6 +1,6 @@
 ﻿namespace ui
 {
-    public partial class App
-    {
-    }
+	public partial class App
+	{
+	}
 }

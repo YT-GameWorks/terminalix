@@ -1,8 +1,5 @@
-﻿using HandyControl.Data;
-using HandyControl.Themes;
-using HandyControl.Tools;
-using System;
-using System.Windows;
+﻿using HandyControl.Themes;
+using System.Windows.Media;
 
 namespace ui
 {
@@ -11,17 +8,8 @@ namespace ui
 		public MainWindow()
 		{
 			InitializeComponent();
-			UpdateSkin(SkinType.Dark);
-		}
-
-		public void UpdateSkin(SkinType skin)
-		{
-			SharedResourceDictionary.SharedDictionaries.Clear();
-			Resources.MergedDictionaries.Add(ResourceHelper.GetSkin(skin));
-			Resources.MergedDictionaries.Add(new ResourceDictionary
-			{
-				Source = new Uri("pack://application:,,,/HandyControl;component/Themes/Theme.xaml")
-			});
+			ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+			ThemeManager.Current.AccentColor = Brushes.Red;
 		}
 	}
 }

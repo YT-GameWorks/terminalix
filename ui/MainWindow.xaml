@@ -8,6 +8,28 @@
                Style="{StaticResource WindowBlur}"
                WindowStartupLocation="CenterScreen"
                Title="Terminalix"
-               Height="450" 
-               Width="800">
+               Height="450"
+               Width="800"
+               FORCE_ENABLE_ACRYLIC_BLUR="true">
+    <hc:BlurWindow.NonClientAreaContent>
+        <StackPanel Height="29">
+            <Menu HorizontalAlignment="Left">
+                <MenuItem Header="Header1">
+                    <MenuItem Header="Header1"/>
+                    <MenuItem Header="Header2"/>
+                    <MenuItem Header="Header2"/>
+                </MenuItem>
+                <MenuItem Header="Header2">
+                    <MenuItem Header="Header1"/>
+                    <MenuItem Header="Header2"/>
+                    <MenuItem Header="Header2"/>
+                </MenuItem>
+                <MenuItem Header="Header3">
+                    <MenuItem Header="Header1"/>
+                    <MenuItem Header="Header2"/>
+                    <MenuItem Header="Header2"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+    </hc:BlurWindow.NonClientAreaContent>
 </hc:BlurWindow>
