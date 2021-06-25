@@ -6,6 +6,8 @@ script:
 - echo installing dotnet
 - choco install dotnetcore-sdk
 - dotnet --version
+- echo installing nuget
+- choco install nuget.commandline
 - echo restoring nuget packages
 - nuget restore
 - echo printing list of projects
