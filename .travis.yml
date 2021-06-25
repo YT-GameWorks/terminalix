@@ -12,6 +12,8 @@ script:
 - choco install nuget.commandline
 - echo restoring nuget packages
 - nuget restore
+- encho install HandyControls
+- dotnet add package HandyControls --version 3.3.6
 - echo printing list of projects
 - dotnet sln list
 - echo building solution
