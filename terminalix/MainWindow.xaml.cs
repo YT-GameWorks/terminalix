@@ -1,9 +1,9 @@
 ﻿using HandyControl.Themes;
+using System;
 using System.Diagnostics;
 using System.Windows.Media;
-using System;
 
-namespace ui
+namespace terminalix
 {
 	public partial class MainWindow
 	{
@@ -15,12 +15,14 @@ namespace ui
 
 			outputBox = (HandyControl.Controls.TextBox)FindName("Output");
 
+			// TODO Make theme switching api
 			ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
 			ThemeManager.Current.AccentColor = Brushes.CornflowerBlue;
 		}
 
 		private void OpenCmd(object sender, System.Windows.RoutedEventArgs e)
 		{
+			// TODO Make wrapper in api for cmd connection
 			try
 			{
 				var process = new Process

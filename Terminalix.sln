@@ -3,12 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "terminalix", "ui\terminalix.csproj", "{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "terminalix", "terminalix\terminalix.csproj", "{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B084A415-2283-41F7-AA9E-3E69F47DC80C} = {B084A415-2283-41F7-AA9E-3E69F47DC80C}
+		{6CF005EA-D266-4224-983F-679D46DA63C8} = {6CF005EA-D266-4224-983F-679D46DA63C8}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winpty", "winpty\winpty.csproj", "{B084A415-2283-41F7-AA9E-3E69F47DC80C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{6CF005EA-D266-4224-983F-679D46DA63C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +27,10 @@ Global
 		{B084A415-2283-41F7-AA9E-3E69F47DC80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B084A415-2283-41F7-AA9E-3E69F47DC80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B084A415-2283-41F7-AA9E-3E69F47DC80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF005EA-D266-4224-983F-679D46DA63C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF005EA-D266-4224-983F-679D46DA63C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF005EA-D266-4224-983F-679D46DA63C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF005EA-D266-4224-983F-679D46DA63C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

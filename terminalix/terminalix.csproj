@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ui.App</StartupObject>
+    <StartupObject>terminalix.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,6 +81,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\api\api.csproj">
+      <Project>{6cf005ea-d266-4224-983f-679d46da63c8}</Project>
+      <Name>api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\winpty\winpty.csproj">
       <Project>{b084a415-2283-41f7-aa9e-3e69f47dc80c}</Project>
       <Name>winpty</Name>

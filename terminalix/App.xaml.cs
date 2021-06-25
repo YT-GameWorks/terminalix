@@ -1,12 +1,13 @@
-﻿using System.Windows;
-using System.Runtime.InteropServices;
+﻿using System;
 using System.Diagnostics;
-using System;
+using System.Runtime.InteropServices;
+using System.Windows;
 
 namespace terminalix
 {
 	public partial class App : Application
 	{
+		// TODO migrate to api
 		[DllImport("kernel32.dll")]
 		static extern IntPtr GetConsoleWindow();
 
@@ -18,7 +19,7 @@ namespace terminalix
 
 
 		[DebuggerNonUserCode]
-		public void InitializeComponent()
+		public void InitralizeComponent()
 		{
 
 #line 4 "..\..\..\App.xaml"
@@ -30,7 +31,7 @@ namespace terminalix
 
 		[STAThread]
 		[DebuggerNonUserCode]
-		public static void Main(string[] args)
+		public static void main(string[] args)
 		{
 			var handle = GetConsoleWindow();
 #if DEBUG
