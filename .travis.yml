@@ -3,7 +3,12 @@ os: windows
 mono: none
 
 script:
+- echo installing dotnet
 - choco install dotnetcore-sdk
 - dotnet --version
+- echo restoring nuget packages
 - dotnet restore
-- msbuild /p:Configuration=Release Terminalix.sln
+- echo printing list of projects
+- dotnet sln list
+- echo building solution
+- dotnet build Terminalix.sln
