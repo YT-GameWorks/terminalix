@@ -17,7 +17,7 @@ namespace terminalix
 		const int SW_SHOW = 5;
 
 
-		[System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[DebuggerNonUserCode]
 		public void InitializeComponent()
 		{
 
@@ -32,10 +32,11 @@ namespace terminalix
 		[DebuggerNonUserCode]
 		public static void Main(string[] args)
 		{
+			var handle = GetConsoleWindow();
 #if DEBUG
-			ShowWindow(GetConsoleWindow(), SW_SHOW);
+			ShowWindow(handle, SW_SHOW);
 #else
-			ShowWindow(GetConsoleWindow(), SW_HIDE);
+			ShowWindow(handle, SW_HIDE);
 #endif
 			var app = new App();
 			app.InitializeComponent();

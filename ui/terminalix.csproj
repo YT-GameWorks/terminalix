@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{18A0A8CE-FB1E-46DD-9ED1-95406FFD9CA6}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>terminalix</RootNamespace>
     <AssemblyName>terminalix</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -79,6 +79,12 @@
     <PackageReference Include="HandyControls">
       <Version>3.3.6</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\winpty\winpty.csproj">
+      <Project>{b084a415-2283-41f7-aa9e-3e69f47dc80c}</Project>
+      <Name>winpty</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
