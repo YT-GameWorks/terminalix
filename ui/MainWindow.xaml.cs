@@ -1,9 +1,6 @@
 ﻿using HandyControl.Themes;
-using HandyControl.Controls;
 using System.Diagnostics;
-using System.IO;
 using System.Windows.Media;
-using System.Windows.Controls;
 using System;
 
 namespace ui
@@ -24,25 +21,33 @@ namespace ui
 
 		private void OpenCmd(object sender, System.Windows.RoutedEventArgs e)
 		{
-			Process cmd = new Process();
-
-			cmd.StartInfo.FileName = "cmd.exe";
-			cmd.Start();
-			StreamReader output = null;
 			try
 			{
-				output = cmd.StandardOutput;
-			}
-			catch (InvalidOperationException err)
-			{
-				Console.WriteLine(err);
-			}
+				var process = new Process
+				{
+					StartInfo = new ProcessStartInfo
+					{
+						FileName = "cmd.exe",
+						RedirectStandardOutput = true,
+						UseShellExecute = false,
+						CreateNoWindow = true
+					}
+				};
 
-			if(outputBox is HandyControl.Controls.TextBox)
-			{
-				outputBox.Text = output.ReadLine();
+				process.Start();
+
+				while (!process.StandardOutput.EndOfStream)
+				{
+					var line = process.StandardOutput.ReadLine();
+					Console.WriteLine(line);
+				}
+
+				process.WaitForExit();
 			}
-			
+			catch (Exception err)
+			{
+				Console.WriteLine(err.Message);
+			}
 		}
 	}
 }
