@@ -6,6 +6,8 @@ script:
 - echo installing dotnet
 - choco install dotnetcore-sdk
 - dotnet --version
+- echo clearning nuget packages
+- dotnet clean Terminalix.sln --configuration Release && dotnet nuget locals all --clear
 - echo installing nuget
 - choco install nuget.commandline
 - echo restoring nuget packages
