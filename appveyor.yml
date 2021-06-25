@@ -1,9 +1,0 @@
-version: 0.0.{build}
-
-build:
-
-  verbosity: minimal
-
-before_build:
-  - dotnet restore ./terminalix/terminalix.csproj
-  - dotnet restore ./api/api.csproj
