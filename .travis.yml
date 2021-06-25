@@ -2,4 +2,4 @@ language: csharp
 os: windows
 solution: Terminalix.sln
 mono: none
-dotnet: 5.0.7
+dotnet: 2.0
