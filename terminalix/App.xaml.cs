@@ -2,22 +2,12 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
+using terminalix.api;
 
 namespace terminalix
 {
 	public partial class App : Application
 	{
-		// TODO migrate to api
-		[DllImport("kernel32.dll")]
-		static extern IntPtr GetConsoleWindow();
-
-		[DllImport("user32.dll")]
-		static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
-		const int SW_HIDE = 0;
-		const int SW_SHOW = 5;
-
-
 		[DebuggerNonUserCode]
 		public void InitralizeComponent()
 		{
@@ -33,11 +23,11 @@ namespace terminalix
 		[DebuggerNonUserCode]
 		public static void main(string[] args)
 		{
-			var handle = GetConsoleWindow();
+			var handle = ConsoleManager.GetConsoleWindow();
 #if DEBUG
-			ShowWindow(handle, SW_SHOW);
+			ConsoleManager.ShowWindow(handle, ConsoleState.GetConsoleState(ConsoleStateEnum.SW_SHOW));
 #else
-			ShowWindow(handle, SW_HIDE);
+			ConsoleManager.ShowWindow(handle, ConsoleState.GetConsoleState(ConsoleStateEnum.SW_HIDE));
 #endif
 			var app = new App();
 			app.InitializeComponent();

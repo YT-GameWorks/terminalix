@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Media;
+using terminalix.api.Themes;
 
 namespace terminalix
 {
@@ -15,13 +16,12 @@ namespace terminalix
 
 			outputBox = (HandyControl.Controls.TextBox)FindName("Output");
 
-			// TODO Make theme switching api
-			ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
-			ThemeManager.Current.AccentColor = Brushes.CornflowerBlue;
+			ThemeSwitcher.SwitchTheme(ThemeManager.Current, Brushes.CornflowerBlue, ApplicationTheme.Dark);
 		}
 
 		private void OpenCmd(object sender, System.Windows.RoutedEventArgs e)
 		{
+			// TODO switch to winpty
 			// TODO Make wrapper in api for cmd connection
 			try
 			{
