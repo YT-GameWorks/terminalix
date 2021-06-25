@@ -5,4 +5,5 @@ build:
   verbosity: minimal
 
 before_build:
-  - dotnet restore
+  - dotnet restore ./terminalix/terminalix.csproj
+  - dotnet restore ./api/api.csproj
