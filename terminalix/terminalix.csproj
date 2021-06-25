@@ -36,6 +36,9 @@
   <PropertyGroup>
     <StartupObject>terminalix.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Terminalix-icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xaml">
@@ -89,6 +92,12 @@
       <Project>{b084a415-2283-41f7-aa9e-3e69f47dc80c}</Project>
       <Name>winpty</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Terminalix-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
