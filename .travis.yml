@@ -1,2 +1,3 @@
 language: csharp
 solution: Terminalix.sln
+dotnet: 7.4.2
