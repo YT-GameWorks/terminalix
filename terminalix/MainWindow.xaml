@@ -32,5 +32,4 @@
             </Menu>
         </StackPanel>
     </hc:BlurWindow.NonClientAreaContent>
-    <hc:TextBox HorizontalAlignment="Left" Height="23" Margin="105,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Name="Output"/>
 </hc:BlurWindow>
